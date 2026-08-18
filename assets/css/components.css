@@ -161,9 +161,6 @@ body.is-loading {
   background: transparent;
   border-bottom: 0;
 }
-.site-header--hide {
-  transform: translateY(-101%);
-}
 .site-header.is-scrolled {
   box-shadow: var(--shadow-md);
   background: var(--bg);
@@ -300,10 +297,11 @@ body.is-loading {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  border: 1px solid var(--line);
+  border: 1px solid var(--line-strong);
   border-radius: var(--radius);
   color: var(--ink);
-  background: transparent;
+  background: var(--surface);
+  box-shadow: var(--shadow-sm);
   transition: all 0.3s var(--ease);
   position: relative;
   cursor: pointer;
@@ -319,6 +317,7 @@ body.is-loading {
   width: 17px;
   height: 17px;
   display: block;
+  stroke-width: 2;
 }
 
 /* RTL / LTR text button */

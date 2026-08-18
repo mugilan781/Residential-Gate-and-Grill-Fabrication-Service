@@ -184,23 +184,6 @@
     });
   });
 
-  /* ---------- Header hide on scroll down ---------- */
-  let lastY = window.scrollY;
-  window.addEventListener(
-    "scroll",
-    () => {
-      if (!header || header.classList.contains("site-header--static") || document.body.classList.contains("menu-open")) return;
-      const y = window.scrollY;
-      if (y > lastY && y > 200) {
-        header.classList.add("site-header--hide");
-      } else {
-        header.classList.remove("site-header--hide");
-      }
-      lastY = y;
-    },
-    { passive: true }
-  );
-
   /* ---------- Current year ---------- */
   document.querySelectorAll("[data-year]").forEach((el) => {
     el.textContent = String(new Date().getFullYear());
