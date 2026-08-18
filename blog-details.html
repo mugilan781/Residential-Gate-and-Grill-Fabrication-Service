@@ -22,6 +22,7 @@
   <script src="assets/js/core.js" defer></script>
   <script src="assets/js/ui.js" defer></script>
   <script src="assets/js/app.js" defer></script>
+  <script src="assets/js/blog.js" defer></script>
 </head>
 <body class="is-loading">
 
@@ -108,10 +109,10 @@
       <div class="page-hero__gridlines" aria-hidden="true"></div>
       <div class="page-hero__inner">
         <nav class="breadcrumbs" aria-label="Breadcrumb" data-reveal>
-          <a href="index.html">Home</a><span class="sep">/</span><a href="blog.html">Blog</a><span class="sep">/</span><span aria-current="page">Classical vs. Modern</span>
+          <a href="index.html">Home</a><span class="sep">/</span><a href="blog.html">Blog</a><span class="sep">/</span><span aria-current="page" data-post-crumb>Classical vs. Modern</span>
         </nav>
-        <h1 data-reveal style="--reveal-delay:.08s">Classical vs. modern <span class="accent">gates</span></h1>
-        <p data-reveal style="--reveal-delay:.14s">Which one will your house thank you for in 20 years? Our data says the answer surprises everyone.</p>
+        <h1 data-reveal style="--reveal-delay:.08s" data-post-hero-title>Classical vs. modern <span class="accent">gates</span></h1>
+        <p data-reveal style="--reveal-delay:.14s" data-post-hero-sub>Which one will your house thank you for in 20 years? Our data says the answer surprises everyone.</p>
       </div>
     </section>
 
@@ -120,14 +121,15 @@
       <div class="container">
         <div class="article-wrap">
           <article class="article-body" data-reveal>
-            <div class="article-meta">
+            <div class="article-meta" data-post-meta>
               <span>Design</span><span class="dot"></span><span>May 2026</span><span class="dot"></span><span>9 min read</span><span class="dot"></span><span>By Ravi Iyer</span>
             </div>
-            <h1>Which gate will your house thank you for in 20 years?</h1>
-            <p class="lead">We've built 500 residential gates and renovated 40 more. That second number is the one that matters — renovating an old gate is the fastest way to learn what actually survives.</p>
+            <h1 data-post-title>Which gate will your house thank you for in 20 years?</h1>
+            <p class="lead" data-post-lead>We've built 500 residential gates and renovated 40 more. That second number is the one that matters — renovating an old gate is the fastest way to learn what actually survives.</p>
 
-            <div class="article-hero-img ratio ratio--16-9"><img src="https://images.pexels.com/photos/30216128/pexels-photo-30216128.jpeg?auto=compress&cs=tinysrgb&w=1400" alt="Classical architecture interior with steel details" fetchpriority="high" decoding="async"></div>
+            <div class="article-hero-img ratio ratio--16-9"><img data-post-img src="https://images.pexels.com/photos/30216128/pexels-photo-30216128.jpeg?auto=compress&cs=tinysrgb&w=1400" alt="Classical architecture interior with steel details" fetchpriority="high" decoding="async"></div>
 
+            <div class="article-body__content" data-post-body>
             <p>Every few months, a homeowner calls us about a gate that was "brand new" five years ago. The paint has blistered, the welds have gone brown at the joints, or the motor sounds like a blender. And every few months, we get the same question: <em>should we have gone classical or modern?</em></p>
 
             <p>The honest answer, after 500 installs and 40 renovations, is that the style is almost never the problem. The problem is the stuff you can't see in the brochure: the steel grade, the weld preparation, the finish system and the automation design. A boring classical gate built honestly will outlast a glamorous modern gate built cheaply, every single time.</p>
@@ -163,6 +165,7 @@
             <p>And beneath that style, it would be boring in all the right ways: hot-dip galvanised substrate where coastal, zinc-phosphated and powder-coated everywhere, automation sized at 1.5× the calculated load, and a structural warranty in writing.</p>
 
             <p>That's the part the brochure can't fake. And it's the part you'll thank us for at year 20.</p>
+            </div>
 
             <div class="article-share">
               <span class="label">Share</span>
@@ -173,19 +176,19 @@
             </div>
 
             <div class="article-author">
-              <img src="https://images.pexels.com/photos/12576220/pexels-photo-12576220.jpeg?auto=compress&cs=tinysrgb&w=300" alt="Portrait of Ravi Iyer">
+              <img data-post-author-img src="https://images.pexels.com/photos/12576220/pexels-photo-12576220.jpeg?auto=compress&cs=tinysrgb&w=300" alt="Portrait of Ravi Iyer">
               <div>
-                <h3>Ravi Iyer</h3>
-                <p>Founder and master fabricator at IRONHAUS. Spends his days in the workshop and his evenings writing about why gates fail — so yours won't.</p>
+                <h3 data-post-author-name>Ravi Iyer</h3>
+                <p data-post-author-bio>Founder and master fabricator at IRONHAUS. Spends his days in the workshop and his evenings writing about why gates fail — so yours won't.</p>
               </div>
             </div>
 
             <nav class="post-nav" aria-label="More articles">
-              <a href="blog-details.html">
+              <a href="blog-details.html?post=seven-entrance-styles" data-post-prev>
                 <span class="mono">← Previous</span>
                 <strong>Seven entrance styles that age better than the paint job</strong>
               </a>
-              <a href="blog-details.html">
+              <a href="blog-details.html?post=gate-motor-fails" data-post-next>
                 <span class="mono">Next →</span>
                 <strong>Why your gate motor fails (and how to design it out)</strong>
               </a>
@@ -196,10 +199,10 @@
             <div class="widget" data-reveal>
               <h3>Recent Posts <span class="mono">/01</span></h3>
               <ul>
-                <li><a href="blog-details.html"><span>Classical vs. modern gates</span><span>May 2026</span></a></li>
-                <li><a href="blog-details.html"><span>Seven entrance styles</span><span>Apr 2026</span></a></li>
-                <li><a href="blog-details.html"><span>The honest corrosion guide</span><span>Apr 2026</span></a></li>
-                <li><a href="blog-details.html"><span>Why your gate motor fails</span><span>Mar 2026</span></a></li>
+                <li><a href="blog-details.html?post=classical-vs-modern"><span>Classical vs. modern gates</span><span>May 2026</span></a></li>
+                <li><a href="blog-details.html?post=seven-entrance-styles"><span>Seven entrance styles</span><span>Apr 2026</span></a></li>
+                <li><a href="blog-details.html?post=corrosion-guide"><span>The honest corrosion guide</span><span>Apr 2026</span></a></li>
+                <li><a href="blog-details.html?post=gate-motor-fails"><span>Why your gate motor fails</span><span>Mar 2026</span></a></li>
               </ul>
             </div>
             <div class="widget" data-reveal style="--reveal-delay:.08s">
@@ -231,17 +234,17 @@
           </div>
         </div>
         <div class="grid grid--3">
-          <a class="related-card" href="blog-details.html" data-reveal>
+          <a class="related-card" href="blog-details.html?post=seven-entrance-styles" data-reveal>
             <span class="related-card__letter">A</span>
             <h3>Seven entrance styles that age better than the paint job</h3>
             <p class="mono">Design · Apr 2026</p>
           </a>
-          <a class="related-card" href="blog-details.html" data-reveal style="--reveal-delay:.08s">
+          <a class="related-card" href="blog-details.html?post=corrosion-guide" data-reveal style="--reveal-delay:.08s">
             <span class="related-card__letter">B</span>
             <h3>The honest corrosion guide: galvanised, painted or stainless</h3>
             <p class="mono">Materials · Apr 2026</p>
           </a>
-          <a class="related-card" href="blog-details.html" data-reveal style="--reveal-delay:.16s">
+          <a class="related-card" href="blog-details.html?post=powder-coating" data-reveal style="--reveal-delay:.16s">
             <span class="related-card__letter">C</span>
             <h3>Powder coating, explained by the people who own the booth</h3>
             <p class="mono">Materials · Mar 2026</p>

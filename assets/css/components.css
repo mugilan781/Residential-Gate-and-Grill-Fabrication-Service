@@ -2166,6 +2166,18 @@ html[data-theme="dark"] .site-footer {
   outline: none;
   border-color: var(--copper);
 }
+.newsletter-form--surface input {
+  background: var(--surface-2);
+  border: 1px solid var(--line);
+  color: var(--ink);
+}
+.newsletter-form--surface input::placeholder {
+  color: var(--muted);
+}
+.newsletter-form--surface input:focus {
+  outline: none;
+  border-color: var(--accent);
+}
 .footer-bottom {
   border-top: 1px solid rgba(245, 243, 238, 0.12);
   padding-block: var(--sp-4);
@@ -2227,45 +2239,6 @@ html[data-theme="dark"] .site-footer {
 .to-top svg {
   width: 18px;
   height: 18px;
-}
-
-/* --------------------------------------------------------------------------
-   19. Pagination
-   -------------------------------------------------------------------------- */
-.pagination {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 0.6rem;
-  margin-top: var(--sp-6);
-}
-.pagination a,
-.pagination span {
-  min-width: 46px;
-  height: 46px;
-  display: grid;
-  place-items: center;
-  border: 1px solid var(--line);
-  border-radius: var(--radius);
-  font-family: var(--font-mono);
-  font-size: 0.8rem;
-  font-weight: 600;
-  color: var(--ink-soft);
-  transition: all 0.3s var(--ease);
-}
-.pagination a:hover {
-  border-color: var(--accent);
-  color: var(--accent);
-}
-.pagination .is-current {
-  background: var(--ink);
-  color: var(--bg);
-  border-color: var(--ink);
-}
-html[data-theme="dark"] .pagination .is-current {
-  background: var(--accent);
-  color: #fff;
-  border-color: var(--accent);
 }
 
 /* --------------------------------------------------------------------------

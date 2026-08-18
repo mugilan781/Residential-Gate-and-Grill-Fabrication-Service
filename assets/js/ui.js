@@ -102,7 +102,8 @@
       b.classList.toggle("is-active", b === btn);
       b.setAttribute("aria-pressed", String(b === btn));
     });
-    const items = wrap.querySelectorAll("[data-cat]");
+    const scope = wrap.closest("[data-filter-scope]") || wrap;
+    const items = scope.querySelectorAll("[data-cat]");
     items.forEach((item) => {
       const show = filter === "all" || item.dataset.cat === filter;
       item.classList.toggle("is-hidden", !show);
