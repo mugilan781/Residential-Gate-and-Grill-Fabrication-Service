@@ -778,7 +778,7 @@ html[data-theme="dark"] .stats-band--dark {
 .story-grid__media {
   position: relative;
 }
-.story-grid__media .ratio {
+.story-grid .ratio {
   border-radius: var(--radius-xl);
 }
 .story-grid__media .exp-badge {
@@ -902,59 +902,44 @@ html[data-theme="dark"] .stats-band--dark {
   height: 14px;
 }
 
-/* Workshop gallery */
-.workshop-grid {
-  display: grid;
-  gap: var(--sp-3);
-}
-@media (min-width: 820px) {
-  .workshop-grid {
-    grid-template-columns: repeat(4, 1fr);
-    grid-auto-rows: 230px;
-  }
-  .workshop-grid .ratio:nth-child(1) {
-    grid-row: span 2;
-  }
-  .workshop-grid .ratio:nth-child(4) {
-    grid-column: span 2;
-  }
-}
-.workshop-grid .ratio {
-  border-radius: var(--radius-lg);
-  cursor: zoom-in;
-}
-.workshop-grid .ratio img {
-  transition: transform 0.8s var(--ease);
-}
-.workshop-grid .ratio:hover img {
-  transform: scale(1.07);
-}
-
 /* Milestones */
 .milestones {
   position: relative;
-  padding-inline-start: clamp(2.4rem, 5vw, 4rem);
   display: grid;
   gap: var(--sp-5);
+  justify-items: center;
 }
 .milestones::before {
   content: "";
   position: absolute;
-  inset-inline-start: 10px;
+  inset-inline-start: 50%;
   inset-block: 0;
   width: 2px;
+  translate: -50% 0;
   background: var(--line);
 }
 .milestone {
   position: relative;
+  width: min(100%, 600px);
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: var(--radius-lg);
+  padding: var(--sp-4);
+  text-align: center;
+  transition: transform 0.4s var(--ease), border-color 0.4s var(--ease);
+}
+.milestone:hover {
+  transform: translateY(-6px);
+  border-color: color-mix(in srgb, var(--accent) 45%, var(--line));
 }
 .milestone::before {
   content: "";
   position: absolute;
-  inset-inline-start: calc(-1 * clamp(2.4rem, 5vw, 4rem) + 10px - 9px);
-  top: 2px;
+  top: calc(var(--sp-5) / -2 - 9px);
+  inset-inline-start: 50%;
   width: 18px;
   height: 18px;
+  margin-inline-start: -9px;
   background: var(--accent);
   transform: rotate(45deg);
 }
@@ -972,7 +957,8 @@ html[data-theme="dark"] .stats-band--dark {
 .milestone p {
   color: var(--muted);
   font-size: var(--fs-sm);
-  max-width: 56ch;
+  max-width: 46ch;
+  margin-inline: auto;
 }
 
 /* Certifications strip */

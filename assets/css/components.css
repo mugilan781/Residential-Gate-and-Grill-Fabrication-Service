@@ -1346,6 +1346,14 @@ body.is-loaded .page-hero [data-reveal] {
   color: rgba(245, 243, 238, 0.6);
 }
 
+/* Dark band typography — fixed palette for both themes */
+.section--dark .eyebrow {
+  color: var(--copper-bright);
+}
+.section--dark .lead {
+  color: rgba(245, 243, 238, 0.8);
+}
+
 /* Testimonial slider */
 .testi-slider {
   position: relative;
