@@ -122,6 +122,8 @@
     window.setTimeout(lift, 2600);
     window.addEventListener("pageshow", (e) => {
       if (e.persisted) {
+        document.body.classList.remove("page-leaving");
+        document.body.classList.remove("is-loading");
         lifted = false;
         veil.classList.remove("is-done");
         window.setTimeout(lift, 120);
