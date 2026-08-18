@@ -439,13 +439,18 @@ html[data-theme="dark"] .section--dark {
 .section-head--split {
   max-width: none;
   display: flex;
-  align-items: end;
+  align-items: flex-end;
   justify-content: space-between;
   gap: var(--sp-4);
   flex-wrap: wrap;
+  margin-bottom: var(--sp-5);
+}
+.section-head--split > div:first-child h2 {
+  margin-bottom: 0;
 }
 .section-head--split .lead {
   max-width: 44ch;
+  margin-bottom: 0.25rem;
 }
 
 /* Reveal on scroll */
