@@ -238,8 +238,18 @@ html[data-theme="dark"] .testi-home {
 .hero2 {
   position: relative;
   background: var(--bg);
-  padding-block: calc(var(--header-h) + clamp(2rem, 5vw, 4rem)) var(--section-pad);
+  display: flex;
+  align-items: center;
+  align-items: safe center;
   overflow: hidden;
+  padding-block: clamp(2.5rem, 6vw, 4rem);
+}
+@media (min-width: 1024px) {
+  .hero2 {
+    height: calc(100vh - var(--header-h) - var(--topbar-h, 0px));
+    height: min(calc(100svh - var(--header-h) - var(--topbar-h, 0px)), 1080px);
+    padding-block: clamp(2rem, 5vh, 4rem);
+  }
 }
 .hero2__inner {
   display: grid;
@@ -255,6 +265,7 @@ html[data-theme="dark"] .testi-home {
   }
 }
 .hero2__content .display-hero {
+  font-size: clamp(2.4rem, 4.6vw, 4.4rem);
   margin-block: var(--sp-3) var(--sp-3);
 }
 .hero2__content .lead {
@@ -306,13 +317,58 @@ html[data-theme="dark"] .testi-home {
   gap: var(--sp-3);
 }
 .hero2__media .ratio {
+  height: clamp(240px, 42svh, 420px);
   border-radius: var(--radius-xl);
 }
 .hero2__media .ratio:nth-child(1) {
-  margin-top: var(--sp-6);
+  margin-top: var(--sp-4);
 }
 .hero2__media .ratio:nth-child(2) {
-  margin-bottom: var(--sp-6);
+  margin-bottom: var(--sp-4);
+}
+@media (max-width: 1023px) {
+  .hero2__inner {
+    gap: var(--sp-5);
+  }
+  .hero2__media {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .hero2__media .ratio {
+    height: clamp(180px, 30vw, 300px);
+  }
+  .hero2__media .ratio:nth-child(1),
+  .hero2__media .ratio:nth-child(2) {
+    margin: 0;
+  }
+}
+@media (max-height: 620px) {
+  .hero2 {
+    padding-block: 1.25rem;
+  }
+  .hero2__media .ratio {
+    height: clamp(150px, 30svh, 260px);
+  }
+  .hero2__media .ratio:nth-child(1) {
+    margin-top: var(--sp-2);
+  }
+  .hero2__media .ratio:nth-child(2) {
+    margin-bottom: var(--sp-2);
+  }
+  .hero2__content .display-hero {
+    font-size: clamp(2rem, 7vh, 2.9rem);
+    margin-block: var(--sp-2);
+  }
+  .hero2__content .lead {
+    font-size: 0.95rem;
+    margin-bottom: var(--sp-3);
+  }
+  .hero2__points {
+    margin-top: var(--sp-2);
+    gap: var(--sp-2);
+  }
+  .hero2__content .hero-slide__actions {
+    margin-top: var(--sp-3);
+  }
 }
 .hero2__float {
   position: absolute;
