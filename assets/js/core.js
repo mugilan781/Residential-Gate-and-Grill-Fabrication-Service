@@ -102,7 +102,6 @@
     const lockScroll = (lock) => {
       const root = document.documentElement;
       root.style.overflow = lock ? "hidden" : "";
-      document.body.style.overflow = lock ? "hidden" : "";
     };
     const closeMenu = () => {
       document.body.classList.remove("menu-open");
