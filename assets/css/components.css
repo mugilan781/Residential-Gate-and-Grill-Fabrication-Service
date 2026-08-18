@@ -109,6 +109,7 @@ body.is-loading {
   align-items: center;
   justify-content: space-between;
   gap: var(--sp-2);
+  min-height: var(--topbar-h, 37px);
   padding-block: 0.55rem;
   max-width: calc(var(--container) + var(--gutter) * 2);
   margin-inline: auto;
@@ -462,7 +463,9 @@ body.menu-open .mobile-menu__foot {
    -------------------------------------------------------------------------- */
 .hero-slider {
   position: relative;
-  min-height: min(92vh, 980px);
+  --controls-h: 108px;
+  height: calc(100vh - var(--header-h) - var(--topbar-h, 0px));
+  height: min(calc(100svh - var(--header-h) - var(--topbar-h, 0px)), 1080px);
   overflow: hidden;
   background: var(--obsidian);
   isolation: isolate;
@@ -525,7 +528,8 @@ body.menu-open .mobile-menu__foot {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  padding-block: calc(var(--header-h) + var(--sp-6)) var(--sp-7);
+  justify-content: safe center;
+  padding-block: max(2rem, 5vh) calc(var(--controls-h) + 1.5rem);
   max-width: calc(var(--container) + var(--gutter) * 2);
   margin-inline: auto;
   padding-inline: var(--gutter);
@@ -575,6 +579,7 @@ body.menu-open .mobile-menu__foot {
   inset-inline: 0;
   bottom: 0;
   z-index: 5;
+  height: var(--controls-h);
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -659,8 +664,10 @@ body.menu-open .mobile-menu__foot {
 /* Scroll hint */
 .scroll-hint {
   position: absolute;
-  inset-inline-start: var(--gutter);
-  bottom: var(--sp-5);
+  inset-inline: 0;
+  margin-inline: auto;
+  width: max-content;
+  bottom: 1.25rem;
   z-index: 4;
   writing-mode: vertical-rl;
   font-family: var(--font-mono);
@@ -671,6 +678,11 @@ body.menu-open .mobile-menu__foot {
   display: flex;
   align-items: center;
   gap: var(--sp-2);
+}
+@media (max-width: 1439px) {
+  .scroll-hint {
+    display: none;
+  }
 }
 .scroll-hint::after {
   content: "";
@@ -684,6 +696,24 @@ body.menu-open .mobile-menu__foot {
   50% { transform: scaleY(1); transform-origin: 0 0; }
   51% { transform-origin: 0 100%; }
   100% { transform: scaleY(0); transform-origin: 0 100%; }
+}
+
+/* Compact hero for short viewports (landscape phones, small laptops) */
+@media (max-height: 620px) {
+  .hero-slide__content {
+    justify-content: flex-start;
+    padding-block: 1rem calc(var(--controls-h) + 1rem);
+  }
+  .hero-slide__content h1 {
+    font-size: clamp(2.4rem, 9vh, 3.6rem);
+    margin-block: 0.75rem;
+  }
+  .hero-slide__content p {
+    font-size: var(--fs-sm);
+  }
+  .hero-slide__actions {
+    margin-top: var(--sp-3);
+  }
 }
 
 /* --------------------------------------------------------------------------

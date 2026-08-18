@@ -2015,7 +2015,8 @@ html[data-theme="dark"] .map-frame__pin {
    RESPONSIVE GLOBAL
    -------------------------------------------------------------------------- */
 @media (max-width: 1024px) {
-  .topbar__info span {
+  .topbar__info span,
+  .topbar__meta {
     display: none;
   }
 }
@@ -2061,6 +2062,9 @@ html[data-theme="dark"] .map-frame__pin {
   }
 }
 @media (max-width: 620px) {
+  :root {
+    --topbar-h: 0px;
+  }
   .grid--2,
   .grid--3,
   .grid--4 {
