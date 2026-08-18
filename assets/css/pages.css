@@ -2057,9 +2057,6 @@ html[data-theme="dark"] .map-frame__pin {
   .grid--4 {
     grid-template-columns: repeat(2, 1fr);
   }
-  .scroll-hint {
-    display: none;
-  }
 }
 @media (max-width: 620px) {
   :root {
