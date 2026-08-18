@@ -665,6 +665,7 @@ html[data-theme="dark"] .section--dark {
    -------------------------------------------------------------------------- */
 .ratio {
   position: relative;
+  display: block;
   overflow: hidden;
   background: color-mix(in srgb, var(--line) 45%, var(--bg));
 }

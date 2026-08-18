@@ -66,9 +66,12 @@
     if (!btn.closest("[data-accordion-multi]")) {
       panel.querySelectorAll("[data-accordion-item].is-open").forEach((i) => {
         i.classList.remove("is-open");
+        const t = i.querySelector("[data-accordion-toggle]");
+        if (t) t.setAttribute("aria-expanded", "false");
       });
     }
     item.classList.toggle("is-open", !isOpen);
+    btn.setAttribute("aria-expanded", String(!isOpen));
   });
 
   /* ---------- Tabs ---------- */

@@ -10,7 +10,7 @@
 .hero-stats {
   position: relative;
   z-index: 6;
-  margin-top: -46px;
+  margin-top: var(--sp-5);
 }
 .hero-stats__inner {
   background: var(--surface);

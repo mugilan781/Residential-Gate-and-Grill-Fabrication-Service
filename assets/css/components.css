@@ -1208,11 +1208,6 @@ body.menu-open .mobile-menu__foot {
   min-width: 0;
   padding-inline: 0.5rem;
 }
-@media (min-width: 900px) {
-  .testi-slider__slide {
-    flex-basis: 50%;
-  }
-}
 .testi-slider__nav {
   display: flex;
   gap: 0.7rem;
@@ -1225,7 +1220,7 @@ body.menu-open .mobile-menu__foot {
   justify-content: center;
 }
 .testi-slider__pips .hero-pip {
-  border-color: var(--line-strong);
+  border-color: rgba(245, 243, 238, 0.45);
 }
 .testi-slider__pips .hero-pip.is-active {
   background: var(--accent);
@@ -1297,10 +1292,13 @@ body.menu-open .mobile-menu__foot {
 .process-step {
   position: relative;
   padding-top: 104px;
+  text-align: center;
 }
 .process-step__index {
   position: absolute;
   top: 0;
+  left: 50%;
+  transform: translateX(-50%);
   width: 92px;
   height: 92px;
   border-radius: 50%;
