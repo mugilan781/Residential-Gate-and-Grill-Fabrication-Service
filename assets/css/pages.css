@@ -239,11 +239,11 @@ html[data-theme="dark"] .testi-home {
   position: relative;
   background-color: var(--bg);
   background-image:
-    radial-gradient(ellipse at 85% 25%, rgba(184, 115, 51, 0.09) 0%, transparent 55%),
-    radial-gradient(ellipse at 15% 80%, rgba(184, 115, 51, 0.06) 0%, transparent 50%),
-    linear-gradient(to right, var(--line) 1px, transparent 1px),
-    linear-gradient(to bottom, var(--line) 1px, transparent 1px);
-  background-size: 100% 100%, 100% 100%, 48px 48px, 48px 48px;
+    radial-gradient(ellipse at 80% 25%, rgba(184, 115, 51, 0.06) 0%, transparent 55%),
+    radial-gradient(ellipse at 15% 80%, rgba(184, 115, 51, 0.04) 0%, transparent 50%),
+    linear-gradient(to right, color-mix(in srgb, var(--line) 25%, transparent) 1px, transparent 1px),
+    linear-gradient(to bottom, color-mix(in srgb, var(--line) 25%, transparent) 1px, transparent 1px);
+  background-size: 100% 100%, 100% 100%, 56px 56px, 56px 56px;
   background-position: 0 0, 0 0, -1px -1px, -1px -1px;
   display: flex;
   align-items: center;
@@ -610,20 +610,20 @@ html[data-theme="dark"] .stats-band--dark {
   z-index: 1;
   background: linear-gradient(
     to top,
-    rgba(11, 12, 13, 0.95) 0%,
-    rgba(11, 12, 13, 0.72) 45%,
-    rgba(11, 12, 13, 0.3) 75%,
-    rgba(11, 12, 13, 0.15) 100%
+    rgba(11, 12, 13, 0.78) 0%,
+    rgba(11, 12, 13, 0.45) 45%,
+    rgba(11, 12, 13, 0.12) 75%,
+    transparent 100%
   );
   transition: opacity 0.4s var(--ease);
 }
 .option-card:hover .option-card__head::before {
   background: linear-gradient(
     to top,
-    rgba(11, 12, 13, 0.98) 0%,
-    rgba(11, 12, 13, 0.76) 48%,
-    rgba(11, 12, 13, 0.25) 80%,
-    rgba(11, 12, 13, 0.1) 100%
+    rgba(11, 12, 13, 0.84) 0%,
+    rgba(11, 12, 13, 0.5) 48%,
+    rgba(11, 12, 13, 0.15) 80%,
+    transparent 100%
   );
 }
 .option-card__head .ratio {
