@@ -173,6 +173,34 @@
     window.setInterval(tick, 1000);
   }
 
+  /* ---------- Services ScrollSpy & Active Tab ---------- */
+  const svcNav = document.querySelector(".svc-nav");
+  if (svcNav) {
+    const navItems = Array.from(svcNav.querySelectorAll(".svc-nav__item"));
+    const blocks = navItems
+      .map((item) => {
+        const href = item.getAttribute("href");
+        return href && href.startsWith("#") ? document.querySelector(href) : null;
+      })
+      .filter(Boolean);
+
+    const updateActiveSvc = () => {
+      const scrollPos = window.scrollY + 220;
+      let currentIdx = 0;
+      blocks.forEach((block, idx) => {
+        if (block.offsetTop <= scrollPos) {
+          currentIdx = idx;
+        }
+      });
+      navItems.forEach((item, idx) => {
+        item.classList.toggle("is-active", idx === currentIdx);
+      });
+    };
+
+    window.addEventListener("scroll", updateActiveSvc, { passive: true });
+    updateActiveSvc();
+  }
+
   /* ---------- Clear error state on input ---------- */
   document.addEventListener("input", (e) => {
     const field = e.target.closest(".field");
