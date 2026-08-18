@@ -696,6 +696,9 @@ html[data-theme="dark"] .section--dark {
 .ratio--1-1 {
   aspect-ratio: 1 / 1;
 }
+.ratio--3-4 {
+  aspect-ratio: 3 / 4;
+}
 .ratio--21-9 {
   aspect-ratio: 21 / 9;
 }
@@ -713,6 +716,9 @@ html[data-theme="dark"] .section--dark {
   }
   .ratio--1-1 {
     padding-top: 100%;
+  }
+  .ratio--3-4 {
+    padding-top: 133.33%;
   }
   .ratio--21-9 {
     padding-top: 42.85%;

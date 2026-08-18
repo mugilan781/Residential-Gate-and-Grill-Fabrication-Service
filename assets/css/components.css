@@ -1243,6 +1243,30 @@ body.menu-open .mobile-menu__foot {
   color: var(--muted);
 }
 
+/* Testimonial cards inside dark bands — fixed palette for both themes */
+.section--dark .testi-card {
+  background: rgba(245, 243, 238, 0.05);
+  border-color: rgba(245, 243, 238, 0.14);
+}
+.section--dark .testi-card::before {
+  color: rgba(201, 133, 74, 0.4);
+}
+.section--dark .testi-card__stars {
+  color: var(--copper-bright);
+}
+.section--dark .testi-card blockquote {
+  color: rgba(245, 243, 238, 0.85);
+}
+.section--dark .testi-card__person {
+  border-color: rgba(245, 243, 238, 0.14);
+}
+.section--dark .testi-card__person h4 {
+  color: var(--offwhite);
+}
+.section--dark .testi-card__person span {
+  color: rgba(245, 243, 238, 0.6);
+}
+
 /* Testimonial slider */
 .testi-slider {
   position: relative;
@@ -2303,6 +2327,7 @@ html[data-theme="dark"] .widget--cta {
   min-height: clamp(320px, 55vh, 560px);
   display: grid;
   place-items: center;
+  align-content: center;
   isolation: isolate;
 }
 .band-img img {
@@ -2329,6 +2354,11 @@ html[data-theme="dark"] .widget--cta {
 .band-img__content h2 {
   font-size: clamp(2rem, 4.5vw, 3.4rem);
   margin-bottom: var(--sp-3);
+}
+.band-img__content .hero-slide__actions {
+  opacity: 1;
+  transform: none;
+  justify-content: center;
 }
 
 /* Quote */
