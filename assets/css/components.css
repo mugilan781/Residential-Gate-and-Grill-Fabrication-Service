@@ -1874,6 +1874,9 @@ html[data-theme="dark"] .site-footer {
     grid-template-columns: 1.6fr 1fr 1fr 1.4fr;
   }
 }
+.site-footer .brand {
+  margin-bottom: var(--sp-3);
+}
 .site-footer .brand-name {
   color: var(--offwhite);
 }
@@ -2042,8 +2045,8 @@ html[data-theme="dark"] .site-footer {
   width: 50px;
   height: 50px;
   border-radius: var(--radius);
-  background: var(--ink);
-  color: var(--bg);
+  background: var(--accent);
+  color: #fff;
   display: grid;
   place-items: center;
   box-shadow: var(--shadow-md);
@@ -2058,8 +2061,8 @@ html[data-theme="dark"] .site-footer {
   transform: none;
 }
 .to-top:hover {
-  background: var(--accent);
-  color: #fff;
+  background: var(--ink);
+  color: var(--accent);
 }
 .to-top svg {
   width: 18px;
