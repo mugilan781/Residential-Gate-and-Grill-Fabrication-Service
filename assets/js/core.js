@@ -99,15 +99,24 @@
   /* ---------- Mobile menu ---------- */
   const navToggle = document.querySelector("[data-nav-toggle]");
   if (navToggle) {
+    const lockScroll = (lock) => {
+      const root = document.documentElement;
+      root.style.overflow = lock ? "hidden" : "";
+      document.body.style.overflow = lock ? "hidden" : "";
+    };
     const closeMenu = () => {
       document.body.classList.remove("menu-open");
       navToggle.setAttribute("aria-expanded", "false");
-      document.body.style.overflow = "";
+      lockScroll(false);
+    };
+    const openMenu = () => {
+      document.body.classList.add("menu-open");
+      navToggle.setAttribute("aria-expanded", "true");
+      lockScroll(true);
     };
     navToggle.addEventListener("click", () => {
-      const isOpen = document.body.classList.toggle("menu-open");
-      navToggle.setAttribute("aria-expanded", String(isOpen));
-      document.body.style.overflow = isOpen ? "hidden" : "";
+      if (document.body.classList.contains("menu-open")) closeMenu();
+      else openMenu();
     });
     document.addEventListener("keydown", (e) => {
       if (e.key === "Escape" && document.body.classList.contains("menu-open")) {
@@ -118,6 +127,12 @@
       if (!document.body.classList.contains("menu-open")) return;
       if (e.target.closest(".mobile-menu a")) closeMenu();
     });
+    const desktopQuery = window.matchMedia("(min-width: 901px)");
+    const onViewportChange = (e) => {
+      if (e.matches) closeMenu();
+    };
+    if (desktopQuery.addEventListener) desktopQuery.addEventListener("change", onViewportChange);
+    else desktopQuery.addListener(onViewportChange);
   }
 
   /* ---------- Page transitions ---------- */

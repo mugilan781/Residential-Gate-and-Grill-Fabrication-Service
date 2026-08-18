@@ -2971,6 +2971,13 @@ html[data-theme="dark"] .map-card__directions:hover {
     top: calc(var(--header-h) + var(--sp-2));
   }
 }
+@media (min-width: 901px) {
+  .mobile-menu,
+  body.menu-open .mobile-menu {
+    visibility: hidden;
+    clip-path: circle(0 at calc(100% - 48px) 44px);
+  }
+}
 @media (max-width: 900px) {
   .main-nav {
     display: none;
