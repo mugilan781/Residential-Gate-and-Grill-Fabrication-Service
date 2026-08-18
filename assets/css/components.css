@@ -1199,6 +1199,7 @@ body.is-loaded .page-hero [data-reveal] {
 .blog-card__meta {
   display: flex;
   align-items: center;
+  flex-wrap: wrap;
   gap: var(--sp-2);
   font-family: var(--font-mono);
   font-size: 0.66rem;
