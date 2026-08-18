@@ -116,6 +116,7 @@
       if (lifted) return;
       lifted = true;
       document.body.classList.remove("is-loading");
+      document.body.classList.add("is-loaded");
       veil.classList.add("is-done");
     };
     window.addEventListener("load", () => window.setTimeout(lift, 350));
