@@ -99,10 +99,24 @@
   /* ---------- Mobile menu ---------- */
   const navToggle = document.querySelector("[data-nav-toggle]");
   if (navToggle) {
+    const closeMenu = () => {
+      document.body.classList.remove("menu-open");
+      navToggle.setAttribute("aria-expanded", "false");
+      document.body.style.overflow = "";
+    };
     navToggle.addEventListener("click", () => {
       const isOpen = document.body.classList.toggle("menu-open");
       navToggle.setAttribute("aria-expanded", String(isOpen));
       document.body.style.overflow = isOpen ? "hidden" : "";
+    });
+    document.addEventListener("keydown", (e) => {
+      if (e.key === "Escape" && document.body.classList.contains("menu-open")) {
+        closeMenu();
+      }
+    });
+    document.addEventListener("click", (e) => {
+      if (!document.body.classList.contains("menu-open")) return;
+      if (e.target.closest(".mobile-menu a")) closeMenu();
     });
   }
 

@@ -2975,6 +2975,9 @@ html[data-theme="dark"] .map-card__directions:hover {
   .main-nav {
     display: none;
   }
+  body.menu-open .site-header {
+    z-index: 400;
+  }
   .nav-toggle {
     display: grid;
     width: 44px;
