@@ -38,16 +38,19 @@
     html.dataset.theme = storedTheme;
   } else if (prefersDark) {
     html.dataset.theme = "dark";
+  } else {
+    html.dataset.theme = "light";
   }
   html.classList.add("theme-ready");
 
-  const syncThemeIcons = () => {
-    const dark = html.dataset.theme === "dark";
-    document.querySelectorAll("[data-theme-toggle] svg").forEach((icon) => {
-      icon.hidden = icon.dataset.icon === "moon" ? dark : !dark;
+  const syncThemeToggle = () => {
+    const isDark = html.dataset.theme === "dark";
+    document.querySelectorAll("[data-theme-toggle]").forEach((btn) => {
+      btn.setAttribute("aria-label", isDark ? "Switch to light theme" : "Switch to dark theme");
+      btn.setAttribute("title", isDark ? "Light mode" : "Dark mode");
     });
   };
-  syncThemeIcons();
+  syncThemeToggle();
 
   document.addEventListener("click", (e) => {
     const btn = e.target.closest("[data-theme-toggle]");
@@ -55,12 +58,24 @@
     const next = html.dataset.theme === "dark" ? "light" : "dark";
     html.dataset.theme = next;
     storageSet("irh-theme", next);
-    syncThemeIcons();
+    syncThemeToggle();
   });
 
   /* ---------- RTL ---------- */
+  const syncDirToggle = () => {
+    const isRtl = html.dir === "rtl";
+    document.querySelectorAll("[data-rtl-toggle]").forEach((btn) => {
+      btn.setAttribute("aria-pressed", String(isRtl));
+      btn.setAttribute("title", isRtl ? "Switch to LTR layout" : "Switch to RTL layout");
+      btn.setAttribute("aria-label", isRtl ? "Switch to LTR layout" : "Switch to RTL layout");
+      const textEl = btn.querySelector(".rtl-text") || btn;
+      textEl.textContent = isRtl ? "LTR" : "RTL";
+    });
+  };
+
   const storedDir = storageGet("irh-dir");
   if (storedDir) html.dir = storedDir;
+  syncDirToggle();
 
   document.addEventListener("click", (e) => {
     const btn = e.target.closest("[data-rtl-toggle]");
@@ -68,7 +83,7 @@
     const next = html.dir === "rtl" ? "ltr" : "rtl";
     html.dir = next;
     storageSet("irh-dir", next);
-    btn.setAttribute("aria-pressed", next === "rtl");
+    syncDirToggle();
   });
 
   /* ---------- Header scroll state ---------- */

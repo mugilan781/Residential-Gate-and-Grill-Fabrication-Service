@@ -179,6 +179,10 @@ video {
   height: auto;
 }
 
+[hidden] {
+  display: none !important;
+}
+
 img {
   -webkit-user-drag: none;
   user-select: none;
@@ -490,6 +494,8 @@ html[data-theme="dark"] .section--dark {
   display: inline-flex;
   align-items: center;
   justify-content: center;
+  text-align: center;
+  line-height: 1;
   gap: var(--sp-2);
   font-family: var(--font-mono);
   font-size: var(--fs-xs);
