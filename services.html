@@ -463,40 +463,64 @@
           <p class="lead" data-reveal style="--reveal-delay:.1s">Five deliberate stages — each checked and signed off before the next begins.</p>
         </div>
         <div class="v-timeline v-timeline--center">
-          <div class="v-timeline__item" data-reveal>
+          <!-- Step 1 (Left) -->
+          <div class="v-timeline__item v-timeline__item--left" data-reveal>
             <div class="v-timeline__card">
               <h3>Site Visit &amp; Measurement</h3>
               <p>We measure, photograph and check ground condition, power availability and automation constraints. You receive the measurement sheet, not just a verbal quote.</p>
             </div>
-            <span class="v-timeline__badge">Week 0</span>
+            <div class="v-timeline__node">
+              <span class="v-timeline__badge">Week 0</span>
+            </div>
+            <div class="v-timeline__spacer" aria-hidden="true"></div>
           </div>
-          <div class="v-timeline__item" data-reveal style="--reveal-delay:.08s">
+
+          <!-- Step 2 (Right) -->
+          <div class="v-timeline__item v-timeline__item--right" data-reveal style="--reveal-delay:.08s">
+            <div class="v-timeline__spacer" aria-hidden="true"></div>
+            <div class="v-timeline__node">
+              <span class="v-timeline__badge">Week 1</span>
+            </div>
             <div class="v-timeline__card">
               <h3>Design &amp; Fixed Quote</h3>
               <p>CAD drawings with 3D preview, material schedule and a guaranteed fixed price contract — site conditions discovered later are our risk, not yours.</p>
             </div>
-            <span class="v-timeline__badge">Week 1</span>
           </div>
-          <div class="v-timeline__item" data-reveal style="--reveal-delay:.16s">
+
+          <!-- Step 3 (Left) -->
+          <div class="v-timeline__item v-timeline__item--left" data-reveal style="--reveal-delay:.16s">
             <div class="v-timeline__card">
               <h3>Fabrication &amp; Finishing</h3>
               <p>Steel is cut, rolled, welded and oven-baked in-house. You receive staged photo updates and are always welcome to visit the floor unannounced.</p>
             </div>
-            <span class="v-timeline__badge">Week 2–6</span>
+            <div class="v-timeline__node">
+              <span class="v-timeline__badge">Week 2–6</span>
+            </div>
+            <div class="v-timeline__spacer" aria-hidden="true"></div>
           </div>
-          <div class="v-timeline__item" data-reveal style="--reveal-delay:.24s">
+
+          <!-- Step 4 (Right) -->
+          <div class="v-timeline__item v-timeline__item--right" data-reveal style="--reveal-delay:.24s">
+            <div class="v-timeline__spacer" aria-hidden="true"></div>
+            <div class="v-timeline__node">
+              <span class="v-timeline__badge">Week 6–7</span>
+            </div>
             <div class="v-timeline__card">
               <h3>Installation &amp; Testing</h3>
               <p>Foundation prep, laser alignment, automation wiring and 50-cycle load testing — followed by a client walkthrough and a 5-year warranty card.</p>
             </div>
-            <span class="v-timeline__badge">Week 6–7</span>
           </div>
-          <div class="v-timeline__item" data-reveal style="--reveal-delay:.32s">
+
+          <!-- Step 5 (Left) -->
+          <div class="v-timeline__item v-timeline__item--left" data-reveal style="--reveal-delay:.32s">
             <div class="v-timeline__card">
               <h3>Warranty &amp; Service</h3>
               <p>5-year structural and finish warranty, annual free tune-ups for the first two years, and a guaranteed 48-hour service response promise.</p>
             </div>
-            <span class="v-timeline__badge">Ongoing</span>
+            <div class="v-timeline__node">
+              <span class="v-timeline__badge">Ongoing</span>
+            </div>
+            <div class="v-timeline__spacer" aria-hidden="true"></div>
           </div>
         </div>
       </div>
@@ -527,55 +551,70 @@
             <div class="gantt-row">
               <div class="gantt-row__info">
                 <span class="gantt-row__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 20h9M16.5 3.5a2.121 2.121 0 0 1 3 3L7 19l-4 1 1-4L16.5 3.5z"/></svg></span>
-                <span class="gantt-row__label">Design &amp; Quote</span>
+                <div class="gantt-row__text">
+                  <strong class="gantt-row__label">Design &amp; Quote</strong>
+                  <span class="gantt-row__sub">Site Survey &amp; 3D CAD</span>
+                </div>
               </div>
               <div class="gantt-track">
                 <div class="gantt-bar" style="--start:1; --span:1;">
-                  <span class="gantt-bar__text">Wk 1 · Survey &amp; 3D CAD</span>
+                  <span class="gantt-bar__text">Wk 1</span>
                 </div>
               </div>
             </div>
             <div class="gantt-row">
               <div class="gantt-row__info">
                 <span class="gantt-row__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/></svg></span>
-                <span class="gantt-row__label">Material Sourcing</span>
+                <div class="gantt-row__text">
+                  <strong class="gantt-row__label">Material Sourcing</strong>
+                  <span class="gantt-row__sub">Certified Steel Order</span>
+                </div>
               </div>
               <div class="gantt-track">
                 <div class="gantt-bar" style="--start:1; --span:2;">
-                  <span class="gantt-bar__text">Wk 1–2 · Certified Steel Order</span>
+                  <span class="gantt-bar__text">Wk 1–2</span>
                 </div>
               </div>
             </div>
             <div class="gantt-row">
               <div class="gantt-row__info">
                 <span class="gantt-row__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14.7 6.3a4 4 0 0 0-5.4 5.4L3 18v3h3l6.3-6.3a4 4 0 0 0 5.4-5.4L15 12l-3-3 2.7-2.7z"/></svg></span>
-                <span class="gantt-row__label">Shop Fabrication</span>
+                <div class="gantt-row__text">
+                  <strong class="gantt-row__label">Shop Fabrication</strong>
+                  <span class="gantt-row__sub">Forging &amp; MIG Welding</span>
+                </div>
               </div>
               <div class="gantt-track">
                 <div class="gantt-bar" style="--start:2; --span:4;">
-                  <span class="gantt-bar__text">Wk 2–5 · Forging &amp; MIG Welding</span>
+                  <span class="gantt-bar__text">Wk 2–5 · Shop Build</span>
                 </div>
               </div>
             </div>
             <div class="gantt-row">
               <div class="gantt-row__info">
                 <span class="gantt-row__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2.69l5.66 5.66a8 8 0 1 1-11.31 0z"/></svg></span>
-                <span class="gantt-row__label">Oven Finishing</span>
+                <div class="gantt-row__text">
+                  <strong class="gantt-row__label">Oven Finishing</strong>
+                  <span class="gantt-row__sub">Phosphate &amp; Powder Coat</span>
+                </div>
               </div>
               <div class="gantt-track">
                 <div class="gantt-bar" style="--start:4; --span:3;">
-                  <span class="gantt-bar__text">Wk 4–6 · Zinc Phosphate &amp; Powder Coat</span>
+                  <span class="gantt-bar__text">Wk 4–6 · Oven Coat</span>
                 </div>
               </div>
             </div>
             <div class="gantt-row">
               <div class="gantt-row__info">
                 <span class="gantt-row__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg></span>
-                <span class="gantt-row__label">Site Install &amp; Test</span>
+                <div class="gantt-row__text">
+                  <strong class="gantt-row__label">Site Install &amp; Test</strong>
+                  <span class="gantt-row__sub">Laser Alignment &amp; Demo</span>
+                </div>
               </div>
               <div class="gantt-track">
                 <div class="gantt-bar" style="--start:6; --span:2;">
-                  <span class="gantt-bar__text">Wk 6–7 · Laser Alignment &amp; Demo</span>
+                  <span class="gantt-bar__text">Wk 6–7 · Handover</span>
                 </div>
               </div>
             </div>
