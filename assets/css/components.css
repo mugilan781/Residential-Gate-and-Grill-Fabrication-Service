@@ -414,27 +414,94 @@ html[dir="rtl"] body.menu-open .mobile-menu {
   padding-inline: var(--gutter);
   padding-top: calc(var(--header-h) + var(--topbar-h) + var(--sp-4));
   padding-bottom: var(--sp-5);
-  gap: var(--sp-2);
+  gap: 0;
 }
 .mobile-menu a {
   font-family: var(--font-display);
-  font-size: clamp(2.2rem, 8vw, 3.4rem);
-  line-height: 1.1;
+  font-size: clamp(1.55rem, 5vw, 2.25rem);
+  line-height: 1;
   text-transform: uppercase;
   color: var(--ink);
   display: flex;
   align-items: center;
+  gap: var(--sp-3);
+  padding-block: clamp(0.8rem, 1.9vh, 1.15rem);
+  border-bottom: 1px solid var(--line);
   opacity: 0;
   transform: translateY(26px);
   transition: opacity 0.5s var(--ease), transform 0.5s var(--ease), color 0.3s;
 }
+.mobile-menu a:last-child {
+  border-bottom-color: transparent;
+}
+.mobile-menu .mm-label {
+  transition: color 0.3s;
+}
+.mobile-menu .mm-ic {
+  width: clamp(42px, 10vw, 50px);
+  height: clamp(42px, 10vw, 50px);
+  flex-shrink: 0;
+  display: grid;
+  place-items: center;
+  border: 1px solid var(--line-strong);
+  border-radius: var(--radius);
+  background: var(--surface);
+  color: var(--accent);
+  box-shadow: var(--shadow-sm);
+  transition: background 0.3s, border-color 0.3s, color 0.3s, transform 0.35s var(--ease);
+}
+.mobile-menu .mm-ic svg {
+  width: clamp(19px, 4.6vw, 22px);
+  height: clamp(19px, 4.6vw, 22px);
+  stroke-width: 1.7;
+}
+.mobile-menu .mm-arrow {
+  width: clamp(17px, 4vw, 20px);
+  height: clamp(17px, 4vw, 20px);
+  margin-inline-start: auto;
+  flex-shrink: 0;
+  color: var(--muted);
+  opacity: 0.55;
+  transition: transform 0.35s var(--ease), color 0.3s, opacity 0.3s;
+}
+html[dir="rtl"] .mobile-menu .mm-arrow {
+  transform: scaleX(-1);
+}
+html[dir="rtl"] .mobile-menu a:hover .mm-arrow {
+  transform: scaleX(-1) translateX(5px);
+}
+.mobile-menu a:hover .mm-label,
 .mobile-menu a:hover {
   color: var(--accent);
+}
+.mobile-menu a:hover .mm-ic {
+  border-color: var(--accent);
+  background: var(--accent-soft);
+  transform: rotate(-4deg);
+}
+.mobile-menu a:hover .mm-arrow {
+  color: var(--accent);
+  opacity: 1;
+  transform: translateX(5px);
+}
+.mobile-menu a.is-active .mm-label {
+  color: var(--accent);
+}
+.mobile-menu a.is-active .mm-ic {
+  background: var(--accent);
+  border-color: var(--accent);
+  color: #fff;
 }
 body.menu-open .mobile-menu a {
   opacity: 1;
   transform: none;
 }
+body.menu-open .mobile-menu a:nth-child(1) { transition-delay: 0.08s; }
+body.menu-open .mobile-menu a:nth-child(2) { transition-delay: 0.14s; }
+body.menu-open .mobile-menu a:nth-child(3) { transition-delay: 0.2s; }
+body.menu-open .mobile-menu a:nth-child(4) { transition-delay: 0.26s; }
+body.menu-open .mobile-menu a:nth-child(5) { transition-delay: 0.32s; }
+body.menu-open .mobile-menu a:nth-child(6) { transition-delay: 0.38s; }
 
 /* --------------------------------------------------------------------------
    4. Hero Slider
