@@ -390,27 +390,30 @@ body.is-loading {
   inset: 0;
   z-index: 300;
   background: var(--bg);
-  clip-path: circle(0 at calc(100% - 48px) 44px);
+  clip-path: circle(0 at calc(100% - var(--gutter) - 22px) calc(var(--topbar-h) + var(--header-h) / 2));
   transition: clip-path 0.7s var(--ease);
   visibility: hidden;
 }
 html[dir="rtl"] .mobile-menu {
-  clip-path: circle(0 at 48px 44px);
+  clip-path: circle(0 at calc(var(--gutter) + 22px) calc(var(--topbar-h) + var(--header-h) / 2));
 }
 body.menu-open .mobile-menu {
-  clip-path: circle(150% at calc(100% - 48px) 44px);
+  clip-path: circle(150% at calc(100% - var(--gutter) - 22px) calc(var(--topbar-h) + var(--header-h) / 2));
   visibility: visible;
 }
 html[dir="rtl"] body.menu-open .mobile-menu {
-  clip-path: circle(150% at 48px 44px);
+  clip-path: circle(150% at calc(var(--gutter) + 22px) calc(var(--topbar-h) + var(--header-h) / 2));
 }
 .mobile-menu__inner {
   height: 100%;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
+  overflow-y: auto;
+  overscroll-behavior: contain;
   padding-inline: var(--gutter);
-  padding-top: calc(var(--header-h) + var(--sp-4));
+  padding-top: calc(var(--header-h) + var(--topbar-h) + var(--sp-4));
+  padding-bottom: var(--sp-5);
   gap: var(--sp-2);
 }
 .mobile-menu a {

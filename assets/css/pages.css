@@ -3097,7 +3097,7 @@ html[data-theme="dark"] .map-card__directions:hover {
   .mobile-menu,
   body.menu-open .mobile-menu {
     visibility: hidden;
-    clip-path: circle(0 at calc(100% - 48px) 44px);
+    clip-path: circle(0 at calc(100% - var(--gutter) - 22px) calc(var(--topbar-h) + var(--header-h) / 2));
   }
 }
 @media (max-width: 900px) {
