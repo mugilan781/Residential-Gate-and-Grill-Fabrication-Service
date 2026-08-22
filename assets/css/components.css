@@ -2070,9 +2070,10 @@ html[data-theme="dark"] .site-footer {
   margin-inline: auto;
   padding-inline: var(--gutter);
 }
-@media (min-width: 640px) {
+@media (min-width: 640px) and (max-width: 1023px) {
   .footer-grid {
-    grid-template-columns: 1.4fr 1fr 1fr;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: var(--sp-6) var(--sp-5);
   }
 }
 @media (min-width: 1024px) {
