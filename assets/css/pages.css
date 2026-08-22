@@ -1096,7 +1096,8 @@ html[data-theme="dark"] .stats-band--dark {
     align-items: stretch;
     justify-content: flex-start;
     gap: 0;
-    width: min(100%, 420px);
+    width: fit-content;
+    max-width: 100%;
     margin-inline: auto;
     padding-block: var(--sp-2);
   }
