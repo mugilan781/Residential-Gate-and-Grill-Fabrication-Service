@@ -1089,6 +1089,26 @@ html[data-theme="dark"] .stats-band--dark {
   height: 30px;
   color: var(--accent);
 }
+@media (max-width: 1023px) {
+  .cert-strip {
+    flex-direction: column;
+    flex-wrap: nowrap;
+    align-items: stretch;
+    justify-content: flex-start;
+    gap: 0;
+    width: min(100%, 420px);
+    margin-inline: auto;
+    padding-block: var(--sp-2);
+  }
+  .cert-item {
+    justify-content: flex-start;
+    padding-block: 0.9rem;
+    border-bottom: 1px solid var(--line);
+  }
+  .cert-item:last-child {
+    border-bottom-color: transparent;
+  }
+}
 
 /* --------------------------------------------------------------------------
    SERVICES (services.html)
