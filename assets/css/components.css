@@ -1912,7 +1912,7 @@ html[data-theme="dark"] .tab-btn.is-active {
   background: var(--surface);
   border: 1px solid var(--line);
   border-radius: var(--radius-xl);
-  padding: clamp(1.8rem, 4vw, 3.2rem);
+  padding: clamp(1.5rem, 2.8vw, 2.4rem);
   box-shadow: var(--shadow-md);
   position: relative;
   overflow: hidden;
@@ -1926,13 +1926,28 @@ html[data-theme="dark"] .tab-btn.is-active {
   background: linear-gradient(90deg, var(--accent), var(--sandstone) 60%, transparent);
 }
 .booking-panel h3 {
-  font-size: 1.9rem;
+  font-size: clamp(1.4rem, 2.2vw, 1.7rem);
   margin-bottom: var(--sp-1);
 }
 .booking-panel > p {
   color: var(--muted);
   font-size: var(--fs-sm);
-  margin-bottom: var(--sp-4);
+  margin-bottom: var(--sp-3);
+}
+/* Compact field rhythm so the panel fits comfortably within the viewport */
+.booking-panel .form {
+  gap: var(--sp-2);
+}
+.booking-panel .field {
+  gap: 0.45rem;
+}
+.booking-panel .field input,
+.booking-panel .field select,
+.booking-panel .field textarea {
+  padding: 0.75rem 0.9rem;
+}
+.booking-panel .field textarea {
+  min-height: 88px;
 }
 
 /* --------------------------------------------------------------------------
