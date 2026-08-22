@@ -1835,6 +1835,15 @@ html[data-theme="dark"] .tab-btn.is-active {
   color: #2E8B57;
   flex-shrink: 0;
 }
+/* Success banner sits on the always-dark footer — keep it readable in both themes */
+.site-footer .form-success {
+  background: rgba(46, 139, 87, 0.16);
+  border-color: rgba(111, 207, 151, 0.45);
+  color: #DFF3E7;
+}
+.site-footer .form-success svg {
+  color: #6FCF97;
+}
 
 /* Filtered-out gallery items */
 .is-hidden {
