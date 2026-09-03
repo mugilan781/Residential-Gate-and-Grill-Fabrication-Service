@@ -76,15 +76,22 @@ body.is-loading {
   animation: veilPulse 1.4s var(--ease) infinite;
 }
 .page-veil__logo .brand-mark {
-  background: var(--accent);
+  background: linear-gradient(135deg, #D48B4B 0%, #B87333 45%, #8A4F1D 100%);
   color: #fff;
-  width: 46px;
-  height: 46px;
+  width: 48px;
+  height: 48px;
+  padding: 9px;
   display: grid;
   place-items: center;
-  font-family: var(--font-display);
-  font-size: 1.6rem;
-  clip-path: polygon(0 0, 100% 0, 100% 78%, 78% 100%, 0 100%);
+  border-radius: 9px;
+  clip-path: polygon(0 0, 100% 0, 100% 75%, 75% 100%, 0 100%);
+  box-shadow: 0 4px 16px rgba(184, 115, 51, 0.35), inset 0 1px 1px rgba(255, 255, 255, 0.4);
+}
+.page-veil__logo .brand-mark svg {
+  width: 100%;
+  height: 100%;
+  display: block;
+  filter: drop-shadow(0 1px 2px rgba(0, 0, 0, 0.35));
 }
 @keyframes veilPulse {
   0%, 100% { opacity: 1; }
@@ -184,26 +191,37 @@ body.is-loading {
   gap: 0.75rem;
   flex-shrink: 0;
   text-decoration: none;
+  transition: opacity 0.3s var(--ease);
 }
 .brand-mark {
   width: 42px;
   height: 42px;
-  background: var(--accent);
-  color: #fff;
+  background: linear-gradient(135deg, #D48B4B 0%, #B87333 45%, #8A4F1D 100%);
+  color: #ffffff;
   display: flex;
   align-items: center;
   justify-content: center;
-  font-family: var(--font-display);
-  font-size: 1.45rem;
-  line-height: 1;
-  letter-spacing: 0.02em;
-  border-radius: var(--radius);
+  padding: 8px;
+  border-radius: 8px;
   clip-path: polygon(0 0, 100% 0, 100% 76%, 76% 100%, 0 100%);
-  transition: transform 0.4s var(--ease);
+  box-shadow: 0 4px 12px rgba(184, 115, 51, 0.24), inset 0 1px 1px rgba(255, 255, 255, 0.35);
+  transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.4s var(--ease), background 0.4s var(--ease);
   flex-shrink: 0;
 }
+.brand-mark svg {
+  width: 100%;
+  height: 100%;
+  display: block;
+  filter: drop-shadow(0 1px 2px rgba(0, 0, 0, 0.3));
+  transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+}
 .brand:hover .brand-mark {
-  transform: rotate(-6deg) scale(1.05);
+  transform: translateY(-2px) rotate(-3deg) scale(1.05);
+  box-shadow: 0 8px 20px rgba(184, 115, 51, 0.38), inset 0 1px 1px rgba(255, 255, 255, 0.5);
+  background: linear-gradient(135deg, #E09858 0%, #C9854A 45%, #965C28 100%);
+}
+.brand:hover .brand-mark svg {
+  transform: scale(1.05);
 }
 .brand-text {
   display: flex;
@@ -220,12 +238,14 @@ body.is-loading {
   display: inline-flex;
   align-items: center;
   white-space: nowrap;
+  transition: color 0.3s var(--ease);
 }
 .brand-name .brand-dash,
 .brand-name em {
   font-style: normal;
-  color: var(--accent);
-  margin-inline: 1px;
+  color: var(--copper-bright);
+  margin-inline: 1.5px;
+  font-weight: 700;
 }
 .brand-tag {
   font-family: var(--font-mono);
@@ -237,6 +257,19 @@ body.is-loading {
   line-height: 1;
   margin-top: 4px;
   display: block;
+  transition: color 0.3s var(--ease);
+}
+.brand:hover .brand-tag {
+  color: var(--ink-soft);
+}
+[data-theme="dark"] .brand-name {
+  color: var(--offwhite);
+}
+[data-theme="dark"] .brand-tag {
+  color: rgba(245, 243, 238, 0.6);
+}
+[data-theme="dark"] .brand:hover .brand-tag {
+  color: rgba(245, 243, 238, 0.9);
 }
 
 .main-nav {
