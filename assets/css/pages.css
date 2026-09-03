@@ -94,6 +94,9 @@
     margin-inline: auto;
   }
 }
+.intro-split__content .eyebrow {
+  margin-bottom: 1.15rem;
+}
 .intro-split__content .display-section {
   margin-bottom: var(--sp-2);
 }

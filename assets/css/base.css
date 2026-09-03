@@ -323,6 +323,7 @@ p {
   display: inline-flex;
   align-items: center;
   gap: var(--sp-2);
+  margin-bottom: 0.95rem;
 }
 .eyebrow::before {
   content: "";
@@ -428,7 +429,7 @@ html[data-theme="dark"] .section--dark {
   justify-content: center;
 }
 .section-head .display-section {
-  margin-top: var(--sp-2);
+  margin-top: 0;
   margin-bottom: var(--sp-2);
 }
 .section-head .lead {
