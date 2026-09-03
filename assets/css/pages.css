@@ -23,7 +23,6 @@
   padding: clamp(1.4rem, 3vw, 2.4rem);
   max-width: calc(var(--container) + var(--gutter) * 2);
   margin-inline: auto;
-  margin-inline: auto;
   padding-inline: var(--gutter);
 }
 @media (min-width: 768px) {
@@ -35,7 +34,22 @@
   border-inline-start: 0;
   padding-inline-start: 0;
   text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
   position: relative;
+}
+.hero-stats .stat-block__num {
+  display: flex;
+  align-items: baseline;
+  justify-content: center;
+  text-align: center;
+  width: 100%;
+}
+.hero-stats .stat-block__label {
+  text-align: center;
+  width: 100%;
 }
 .hero-stats .stat-block + .stat-block::before {
   content: "";
