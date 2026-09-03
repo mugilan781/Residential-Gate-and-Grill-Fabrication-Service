@@ -898,34 +898,34 @@ body.menu-open .mobile-menu a:nth-child(6) { transition-delay: 0.38s; }
   height: 100%;
   object-fit: cover;
   object-position: center;
-  opacity: 0.32;
-  filter: brightness(0.72) contrast(1.1) saturate(0.92);
+  opacity: 0.55;
+  filter: brightness(0.88) contrast(1.08) saturate(1.05);
   transform: scale(1.05);
   transition: transform 1.6s var(--ease-out), opacity 1.2s var(--ease-out);
 }
 body.is-loaded .page-hero__bg img {
   transform: scale(1);
-  opacity: 0.38;
+  opacity: 0.62;
 }
 .page-hero::before {
   content: "";
   position: absolute;
   inset: 0;
   background:
-    linear-gradient(180deg, rgba(17, 19, 21, 0.72) 0%, rgba(17, 19, 21, 0.55) 45%, rgba(17, 19, 21, 0.94) 100%),
-    radial-gradient(60% 90% at 78% 20%, rgba(184, 115, 51, 0.28), transparent 60%);
+    linear-gradient(180deg, rgba(17, 19, 21, 0.48) 0%, rgba(17, 19, 21, 0.35) 45%, rgba(17, 19, 21, 0.78) 100%),
+    radial-gradient(65% 90% at 78% 20%, rgba(184, 115, 51, 0.22), transparent 60%);
   z-index: -1;
 }
 [dir="rtl"] .page-hero::before {
   background:
-    linear-gradient(180deg, rgba(17, 19, 21, 0.72) 0%, rgba(17, 19, 21, 0.55) 45%, rgba(17, 19, 21, 0.94) 100%),
-    radial-gradient(60% 90% at 22% 20%, rgba(184, 115, 51, 0.28), transparent 60%);
+    linear-gradient(180deg, rgba(17, 19, 21, 0.48) 0%, rgba(17, 19, 21, 0.35) 45%, rgba(17, 19, 21, 0.78) 100%),
+    radial-gradient(65% 90% at 22% 20%, rgba(184, 115, 51, 0.22), transparent 60%);
 }
 .page-hero__gridlines {
   position: absolute;
   inset: 0;
   z-index: -1;
-  opacity: 0.4;
+  opacity: 0.35;
   background-image: linear-gradient(rgba(245, 243, 238, 0.05) 1px, transparent 1px),
     linear-gradient(90deg, rgba(245, 243, 238, 0.05) 1px, transparent 1px);
   background-size: 72px 72px;
@@ -952,12 +952,14 @@ body.is-loaded .page-hero__bg img {
   margin-block: var(--sp-3) var(--sp-3);
   margin-inline: auto;
   max-width: 18ch;
+  text-shadow: 0 2px 20px rgba(0, 0, 0, 0.75), 0 1px 4px rgba(0, 0, 0, 0.9);
 }
 .page-hero p {
-  color: rgba(245, 243, 238, 0.72);
+  color: rgba(245, 243, 238, 0.92);
   max-width: 52ch;
   margin-inline: auto;
   font-size: clamp(1rem, 1.25vw, 1.2rem);
+  text-shadow: 0 2px 14px rgba(0, 0, 0, 0.85);
 }
 
 /* Hero entrance — plays once the page veil lifts */
@@ -1037,7 +1039,8 @@ body.is-loaded .page-hero [data-reveal] {
   font-size: 0.68rem;
   letter-spacing: var(--track-widest);
   text-transform: uppercase;
-  color: rgba(245, 243, 238, 0.55);
+  color: rgba(245, 243, 238, 0.75);
+  text-shadow: 0 1px 8px rgba(0, 0, 0, 0.85);
 }
 .breadcrumbs a {
   color: var(--sandstone);
