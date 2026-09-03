@@ -2186,16 +2186,6 @@ html[data-theme="dark"] .site-footer {
   font-size: 1.2rem;
   color: var(--offwhite);
   margin-bottom: var(--sp-3);
-  display: flex;
-  align-items: center;
-  gap: var(--sp-2);
-}
-.footer-col h4::after {
-  content: "";
-  flex: 1;
-  max-width: 34px;
-  height: 1px;
-  background: var(--copper);
 }
 .footer-col p {
   font-size: var(--fs-sm);
