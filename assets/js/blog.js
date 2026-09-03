@@ -26,6 +26,41 @@
   };
 
   const POSTS = {
+    "classical-vs-modern": {
+      crumb: "Classical vs. Modern",
+      heroTitle: "Classical vs. modern <span class=\"accent\">gates</span>",
+      heroSub: "Which one will your house thank you for in 20 years? Our data says the answer surprises everyone.",
+      category: "Design",
+      date: "May 2026",
+      readTime: "9 min read",
+      author: "Ravi Iyer",
+      title: "Which gate will your house thank you for in 20 years?",
+      lead: "We've built 500 residential gates and renovated 40 more. That second number is the one that matters — renovating an old gate is the fastest way to learn what actually survives.",
+      img: "assets/images/blog/classical-vs-modern.jpg",
+      imgAlt: "Classical forged scrollwork gate alongside modern steel slat gate at a luxury driveway entrance",
+      description: "Classical vs. modern gates — which one will your house thank you for in 20 years? A decade of driveway decisions, distilled into one honest article.",
+      body: `
+        <p>Every few months, a homeowner calls us about a gate that was "brand new" five years ago. The paint has blistered, the welds have gone brown at the joints, or the motor sounds like a blender. And every few months, we get the same question: <em>should we have gone classical or modern?</em></p>
+
+        <p>The honest answer, after 500 installs and 40 renovations, is that the style is almost never the problem. The problem is the stuff you can't see in the brochure: the steel grade, the weld preparation, the finish system and the automation design. A boring classical gate built honestly will outlast a glamorous modern gate built cheaply, every single time.</p>
+
+        <h2>What actually fails first</h2>
+        <p>When an entrance ages badly, the failure almost never starts with the design. It starts at four specific points:</p>
+        <ul>
+          <li><strong>Capillary water traps:</strong> Horizontal slats without an internal weep hole hold standing water all monsoon. Rust begins from the inside out, where no brush can reach.</li>
+          <li><strong>Undersized hinges:</strong> Modern cantilever slides need twice the bearing rating of a traditional swing gate. Fabricators size for the weight at rest, not the dynamic load in a windstorm.</li>
+          <li><strong>Single-coat paint:</strong> Any gate painted on-site with enamel over mill scale will fail in 24 months in Bangalore's humidity. Powder coating over zinc phosphate gives 15+ years.</li>
+          <li><strong>Motor torque mismatches:</strong> Automation motors bought off the shelf without a wind-load calculation run hot and burn out by season three.</li>
+        </ul>
+
+        <h2>The 20-year verdict</h2>
+        <p>If you want an entrance that looks better at year twenty than it did on installation day, the rule is simple: choose the style that matches your architecture, but demand the fabrication discipline that survives the weather. A classical gate with generous negative space and hot-dip galvanising is timeless. A modern minimalist gate with precision mitered corners and baked fluoropolymer powder coating is equally timeless.</p>
+
+        <div class="pull-quote">
+          <blockquote>Style is a preference. Structural discipline is an engineering fact. Build for the monsoon, and the aesthetics will look after themselves.</blockquote>
+          <cite>— Ravi Iyer, Master Fabricator, IRONHAUS</cite>
+        </div>`
+    },
     "seven-entrance-styles": {
       crumb: "Seven Entrance Styles",
       heroTitle: "Seven entrance styles that <span class=\"accent\">age well</span>",
@@ -36,8 +71,8 @@
       author: "Ravi Iyer",
       title: "Seven entrance styles that age better than the paint job",
       lead: "We keep a mental file of every gate we've built that still looks right ten years on. These are the seven entrance styles that keep showing up in it.",
-      img: "https://images.pexels.com/photos/31737859/pexels-photo-31737859.jpeg?auto=compress&cs=tinysrgb&w=1400",
-      imgAlt: "Modern villa entrance with a clean steel gate",
+      img: "assets/images/blog/seven-entrance-styles.jpg",
+      imgAlt: "Contemporary luxury villa with horizontal steel slat sliding gate",
       description: "The gate patterns that still photograph well a decade later — from clean horizontals to quiet art-deco. Judged on the driveway, not the brochure.",
       body: `
         <p>Ten years is the honest horizon for a gate. The paint will have been redone at least once, the automation will be on its second motor, and the neighbourhood will have decided whether your entrance is a landmark or a liability. We keep a mental file of every gate that has passed that test — here is what keeps showing up in it.</p>
@@ -72,8 +107,8 @@
       author: "Kavitha Nair",
       title: "Galvanised, painted or stainless: the honest corrosion guide",
       lead: "Every finish salesman has a favourite metal. We have thirty years of Bangalore monsoons instead — and the rust log to prove which one wins.",
-      img: "https://images.pexels.com/photos/8482510/pexels-photo-8482510.jpeg?auto=compress&cs=tinysrgb&w=1400",
-      imgAlt: "Residential building exterior with metal details",
+      img: "assets/images/blog/corrosion-guide.jpg",
+      imgAlt: "Workshop comparison of hot-dip galvanised steel, powder coated frame, and marine-grade stainless steel",
       description: "Galvanised, painted or stainless — what the brochures don't tell you about coastal air, monsoon walls and the real cost of rust. From the IRONHAUS coating lab.",
       body: `
         <p>Ask any metal salesman what to build a gate from and you'll get a confident answer, usually involving whatever they happen to sell. Ask us instead, and you'll get a question back: where does the gate live, and how long do you want it to survive? Because the honest answer is that every metal fails — the difference is where the failure starts.</p>
@@ -109,8 +144,8 @@
       author: "Farhan Qureshi",
       title: "Why your gate motor fails (and how to design it out)",
       lead: "We service motors we never installed. After enough of them, you stop blaming the motor and start blaming the gate — because the gate decided the motor's fate months before it was fitted.",
-      img: "https://images.pexels.com/photos/34494574/pexels-photo-34494574.jpeg?auto=compress&cs=tinysrgb&w=1400",
-      imgAlt: "Balcony railings on an apartment facade at dusk",
+      img: "assets/images/blog/gate-motor-fails.jpg",
+      imgAlt: "Automated electric sliding gate motor operator installation with gear rack",
       description: "Ninety percent of gate motor failures are decided on the drawing board. The weight budget, the limit switches, the control box — here's how we design them out.",
       body: `
         <p>The most common call we get isn't for a new gate. It's for a motor that's stopped behaving — grinding, stopping mid-travel, or refusing to open on a humid morning. And after you've taken enough of those calls, you notice the pattern: the motor is rarely the villain. The gate it was bolted to made the failure inevitable.</p>
@@ -150,8 +185,8 @@
       author: "Suresh Gowda",
       title: "Powder coating, explained by the people who own the booth",
       lead: "I run the booth. Ask me about powder coating and you'll get the version nobody puts in the brochure — starting with what it can't fix.",
-      img: "https://images.unsplash.com/photo-1581094794329-c8112a89af12?auto=format&fit=crop&w=1400&q=80",
-      imgAlt: "Fabricator working in a metal workshop",
+      img: "assets/images/blog/powder-coating.jpg",
+      imgAlt: "Fabricator applying electrostatic powder coating to a welded steel gate frame in spray booth",
       description: "What powder coating actually is, why the prep matters more than the paint, and how to test a coat with your thumbnail — from the man who runs the booth.",
       body: `
         <p>Powder coating sounds like a miracle: dry paint, no solvents, baked on, tougher than anything liquid. It is tougher — when it's done right. But the booth sees what the brochure doesn't: the chemistry that happens before the powder ever touches the metal, and the mistakes that no oven can fix.</p>
